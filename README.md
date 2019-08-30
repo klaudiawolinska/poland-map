@@ -2,7 +2,7 @@
 
 Set of Python scripts for plotting arbitrary data on a map.
 
-Data sources - scraping scripts - output file:
+Data used:
 
 <table class="tg">
   <tr>
@@ -49,3 +49,4 @@ Data sources - scraping scripts - output file:
   </tr>
 </table>
 
+Mapbox account with access token is needed for the plot.
