@@ -14,19 +14,19 @@ Data used:
   <tr>
     <td class="tg-lboi">Flixbus bus stops in Poland</td>
     <td class="tg-lboi">https://www.flixbus.pl/autobusy/polska</td>
-    <td class="tg-lboi">flixbus_scrape</td>
+    <td class="tg-lboi">flixbus_scrape.py</td>
     <td class="tg-0lax">flixbus.csv</td>
   </tr>
   <tr>
     <td class="tg-lboi">Coordinates of Poland cities</td>
     <td class="tg-lboi">https://latitudelongitude.org/pl/</td>
-    <td class="tg-lboi">cities_scrape</td>
+    <td class="tg-lboi">cities_scrape.py</td>
     <td class="tg-0lax">cities.csv</td>
   </tr>
   <tr>
     <td class="tg-0lax">List of castles in Poland</td>
     <td class="tg-0lax">https://zamki.net.pl/gps.php</td>
-    <td class="tg-0lax">castles_scrape</td>
+    <td class="tg-0lax">castles_scrape.py</td>
     <td class="tg-0lax">castles.csv</td>
   </tr>
   <tr>
@@ -44,7 +44,7 @@ Data used:
   <tr>
     <td class="tg-0lax">List of registered museums in Poland</td>
     <td class="tg-0lax">https://en.wikipedia.org/wiki/List_of_registered_museums_in_Poland</td>
-    <td class="tg-0lax">museums_scrape</td>
+    <td class="tg-0lax">museums_scrape.py</td>
     <td class="tg-0lax">museums.csv</td>
   </tr>
 </table>
