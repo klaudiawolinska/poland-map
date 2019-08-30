@@ -2,7 +2,8 @@
 
 Set of Python scripts for plotting arbitrary data on a map.
 
-Data used:
+Project is split into 3 parts:
+1) Web scrapers for respective data:
 
 <table class="tg">
   <tr>
@@ -48,5 +49,9 @@ Data used:
     <td class="tg-0lax">museums.csv</td>
   </tr>
 </table>
+
+2) Data cleaning and transformations: clean_data.py
+
+3) Drawing scatter points on a map: draw_map.py
 
 Mapbox account with access token is needed for the plot.
