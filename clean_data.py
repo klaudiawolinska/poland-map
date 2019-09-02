@@ -7,7 +7,7 @@ gardens = pd.read_csv(r"input_data/gardens.csv")
 museums = pd.read_csv(r"input_data/museums.csv")
 zoos = pd.read_csv(r"input_data/zoos.csv")
 
-# CLEANING CITIES
+# CITIES
 # Split coordinates column into two separate
 cities["coordinates"] = cities["coordinates"].str.replace("[", "")
 cities["coordinates"] = cities["coordinates"].str.replace("]", "")
@@ -30,7 +30,7 @@ cities["city"] = cities["city"].str.replace("-", " ")
 # Create new subfolder clean_data first
 cities.to_csv('clean_data/cities_clean.csv', index=False)
 
-# CLEANING FLIXBUS
+# FLIXBUS
 # Replace "-" with whitespace for consistency with cities
 flixbus["city"] = flixbus["city"].str.replace("-", " ")
 
@@ -51,7 +51,7 @@ flixbus = flixbus.merge(cities, how="left", on="city")
 
 flixbus.to_csv('clean_data/flixbus_clean.csv', index=False)
 
-# CLEANING MUSEUMS
+# MUSEUMS
 # Replace "-" with whitespace for consistency with cities
 museums["city"] = museums["city"].str.replace("-", " ")
 
@@ -59,12 +59,12 @@ museums = museums.merge(cities, how="left", on="city")
 
 print(museums.isna().sum())  # 17 missing values, ignored as they are not so crucial here
 
-museums.to_csv('clean_data/museums_clean.csv', index=False)
-
 # Delete rows with missing coordinates
 museums = museums[museums["latitude"].notna()]
 
-# CLEANING GARDENS
+museums.to_csv('clean_data/museums_clean.csv', index=False)
+
+# GARDENS
 gardens = gardens.merge(cities, how="left", on="city")
 
 print(gardens.isna().sum())  # 12 missing values, ignored as they are not so crucial here
@@ -74,7 +74,7 @@ gardens = gardens[gardens["latitude"].notna()]
 
 gardens.to_csv('clean_data/gardens_clean.csv', index=False)
 
-# CLEANING ZOOS
+# ZOOS
 zoos = zoos.merge(cities, how="left", on="city")
 
 print(zoos.isna().sum())  # 2 missing values, ignored as they are not so crucial here
@@ -83,3 +83,7 @@ print(zoos.isna().sum())  # 2 missing values, ignored as they are not so crucial
 zoos = zoos[zoos["latitude"].notna()]
 
 zoos.to_csv('clean_data/zoos_clean.csv', index=False)
+
+# CASTLES
+# Dataset is perfect :) exporting it as it is into clean_data folder
+castles.to_csv('clean_data/castles_clean.csv', index=False)
